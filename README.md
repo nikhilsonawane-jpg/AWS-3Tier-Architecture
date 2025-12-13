@@ -18,6 +18,16 @@ The architecture follows **best practices for security, scalability, high availa
 - Private DB subnets host Amazon RDS
 - NAT Gateway provides outbound internet access for private resources
 
+## Request Flow
+
+1. A user sends an HTTP request to the Application Load Balancer (public endpoint).
+2. The ALB receives traffic via the Internet Gateway.
+3. ALB forwards requests to healthy EC2 instances in private application subnets.
+4. EC2 instances process the request and communicate with the RDS database in private DB subnets.
+5. RDS responds only to application instances via security group rules.
+6. Responses are sent back to the user through the ALB.
+7. Outbound internet access for private instances is handled via NAT Gateway.
+
 ## 🧱 Architecture Components
 
 ### 1️⃣ Networking Layer
