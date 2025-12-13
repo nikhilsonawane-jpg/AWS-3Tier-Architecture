@@ -10,6 +10,11 @@ The architecture follows **best practices for security, scalability, high availa
 ![Architecture](architecture/aws-3tier-diagram.png)
 
 ---
+### Diagram Explanation
+- Public subnets host the Application Load Balancer
+- Private app subnets host EC2 instances in an Auto Scaling Group
+- Private DB subnets host Amazon RDS
+- NAT Gateway provides outbound internet access for private resources
 
 ## 🧱 Architecture Components
 
