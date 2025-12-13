@@ -9,6 +9,8 @@ The architecture follows **best practices for security, scalability, high availa
 ## 🏗️ Architecture Diagram
 ![Architecture](architecture/aws-3tier-diagram.png)
 
+> High-level view of a secure, scalable AWS 3-tier architecture deployed across multiple Availability Zones.
+
 ---
 ### Diagram Explanation
 - Public subnets host the Application Load Balancer
